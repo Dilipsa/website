@@ -1,0 +1,27 @@
+/* Define CSS variables */
+:root {
+  --primary-color: #496989;
+  --secondary-color: #58A399;
+  --accent-color: #A8CD9F;
+  --background-color: #E2F4C5;
+  --font-size: 16px;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+body{
+  background-color: var(--background-color);
+}
+.card{
+  background-color: var(--accent-color);
+  box-shadow: 4px 4px 10px 4px ;
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+}

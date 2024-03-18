@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center">
+  {% if profile.profile_pic and profile.profile_pic.url %}
+  <img src="{{ profile.profile_pic.url }}" alt="Profile pic" width="300px">
+  {% else %}
+  <img src="{% static 'images/profile.png' %}" alt="Profile pic" width="300px">
+  {% endif %}
+</div>
+<div class="row">
+  <div class="col-md-4 offset-4 mt-3">
+    <div class="card">
+      <div class="card-header">
+        {{profile.username|title}}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Email Address: {{profile.email}}</li>
+        {% if profile.first_name %}
+        <li class="list-group-item">First Name: {{profile.first_name}}</li>
+        {% endif %}
+        {% if profile.last_name %}
+        <li class="list-group-item">Last Name: {{profile.last_name}}</li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock content %}
